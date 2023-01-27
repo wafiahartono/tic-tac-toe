@@ -1,0 +1,175 @@
+body {
+  font-family: 'Courier Prime', monospace;
+  margin: 1rem;
+}
+
+button {
+  all: unset;
+  border-radius: .25rem;
+  cursor: pointer;
+  outline: 1px solid black;
+  padding: .25rem 1.5rem;
+}
+
+button:focus:not(:disabled) {
+  outline: 2px solid black;
+}
+
+button:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+button:disabled {
+  color: rgba(0, 0, 0, .5);
+  cursor: unset;
+  outline: 1px solid rgba(0, 0, 0, .5);
+}
+
+input[type=text] {
+  all: unset;
+  border-bottom: 1px solid rgba(0, 0, 0, .6);
+  color: rgba(0, 0, 0, .6);
+  padding: .25rem 1rem;
+  text-align: center;
+}
+
+input[type=text]:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, .8);
+  color: rgba(0, 0, 0, .8);
+}
+
+input, label {
+  display: block;
+}
+
+.debug {
+  background-color: black;
+  bottom: 0;
+  color: white;
+  display: block;
+  left: 50%;
+  margin: auto auto;
+  padding: .25rem;
+}
+
+.center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.center--vertical {
+  height: calc(100vh - 2rem);
+}
+
+.player {
+  text-align: center;
+}
+
+.player > *:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.form-group input,
+.form-group .radio {
+  margin-top: .25rem;
+}
+
+.form-group .radio {
+  display: inline-block;
+  text-align: left;
+}
+
+.form-group .radio label,
+.form-group .radio input {
+  display: inline-block;
+}
+
+.stats {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.stats > *:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.stats p {
+  margin: 0;
+}
+
+.scoreboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.score {
+  border-radius: .25rem;
+  outline: 1px solid black;
+  padding: .25rem 0;
+  width: 8rem;
+}
+
+p.score__value {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-top: .25rem;
+}
+
+.board {
+  display: grid;
+  height: 80vw;
+  gap: .5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  max-height: 300px;
+  max-width: 300px;
+  margin: 2rem auto 0;
+  width: 80vw;
+}
+
+.space {
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: .5rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, .05);
+  outline: 1px solid rgba(0, 0, 0, .8);
+  padding: 1rem;
+}
+
+.space--fixed {
+  cursor: default;
+}
+
+.space--cross {
+  background-image: url("../img/cross.png");
+}
+
+.space--circle {
+  background-image: url("../img/circle.png");
+}
+
+.space--highlight-win {
+  background-color: lightgreen;
+}
+
+.space--highlight-lose {
+  background-color: lightcoral;
+}
+
+.board:not([disabled]) .space:not([disabled]) {
+  cursor: pointer;
+}
+
+.board:not([disabled]) .space:hover:not([disabled]) {
+  background-color: rgba(0, 0, 0, .05);
+}
+
+.status {
+  border-radius: .25rem;
+  padding: .25rem 1rem;
+}

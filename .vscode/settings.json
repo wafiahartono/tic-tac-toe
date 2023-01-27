@@ -1,0 +1,30 @@
+{
+        "sqltools.connections": [
+                {
+                        "mysqlOptions": {
+                                "authProtocol": "default"
+                        },
+                        "previewLimit": 50,
+                        "server": "localhost",
+                        "port": 3306,
+                        "driver": "MariaDB",
+                        "name": "ubaya_wfp_w01",
+                        "database": "ubaya_wfp_w01",
+                        "username": "root",
+                        "password": ""
+                },
+                {
+                        "mysqlOptions": {
+                                "authProtocol": "default"
+                        },
+                        "previewLimit": 50,
+                        "server": "localhost",
+                        "port": 3306,
+                        "driver": "MariaDB",
+                        "name": "tic_tac_toe",
+                        "database": "tic_tac_toe",
+                        "username": "root",
+                        "password": ""
+                }
+        ]
+}
